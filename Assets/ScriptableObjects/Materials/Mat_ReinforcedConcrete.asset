@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c245204638607a4dab22223aac49005, type: 3}
+  m_Name: Mat_ReinforcedConcrete
+  m_EditorClassIdentifier: Assembly-CSharp::DisasterSim.Building.MaterialProperties
+  MaterialDisplayName: Reinforced Concrete
+  DisplayColor: {r: 0.42, g: 0.44, b: 0.47, a: 1}
+  Density: 2500
+  TensileStrength: 40
+  CompressiveStrength: 35
+  Elasticity: 30
+  FractureThreshold: 0.85
+  Durability: 0.9
+  ThermalExpansionCoefficient: 10
+  WaterResistance: 0.65
+  EarthquakeResistance: 0.8
+  TsunamiResistance: 0.75

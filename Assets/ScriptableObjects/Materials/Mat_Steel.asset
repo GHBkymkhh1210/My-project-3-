@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c245204638607a4dab22223aac49005, type: 3}
+  m_Name: Mat_Steel
+  m_EditorClassIdentifier: Assembly-CSharp::DisasterSim.Building.MaterialProperties
+  MaterialDisplayName: Steel
+  DisplayColor: {r: 0.72, g: 0.75, b: 0.79, a: 1}
+  Density: 7850
+  TensileStrength: 400
+  CompressiveStrength: 250
+  Elasticity: 200
+  FractureThreshold: 0.9
+  Durability: 0.85
+  ThermalExpansionCoefficient: 12
+  WaterResistance: 0.4
+  EarthquakeResistance: 0.9
+  TsunamiResistance: 0.7

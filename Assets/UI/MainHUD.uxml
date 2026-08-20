@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI/MainHUD.uss" />
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
+
+        <ui:VisualElement name="top-bar" class="top-bar">
+            <ui:Label text="DISASTER-RESISTANT ARCHITECTURE SIMULATOR" class="title-label" />
+            <ui:VisualElement class="top-bar-spacer" picking-mode="Ignore" />
+            <ui:Label text="STATUS: IDLE" name="status-label" class="stat-label" />
+            <ui:Label text="TIME: 00:00" name="time-label" class="stat-label" />
+            <ui:Label text="TEMP: 20°C" name="temp-label" class="stat-label" />
+            <ui:Label text="HUMIDITY: 50%" name="humidity-label" class="stat-label" />
+            <ui:Label text="DISASTER: NONE" name="disaster-label" class="stat-label" />
+            <ui:Label text="DAMAGE: 0%" name="damage-label" class="stat-label stat-damage" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="middle-row" class="middle-row" picking-mode="Ignore">
+
+            <ui:VisualElement name="left-panel" class="side-panel">
+                <ui:ScrollView name="left-panel-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" class="side-scroll">
+                    <ui:Label text="CONSTRUCTION" class="panel-header" />
+                    <ui:Button text="Add Foundation" name="btn-add-foundation" class="tool-button" />
+                    <ui:Button text="Add Column" name="btn-add-column" class="tool-button" />
+                    <ui:Button text="Add Beam" name="btn-add-beam" class="tool-button" />
+                    <ui:Button text="Add Wall" name="btn-add-wall" class="tool-button" />
+                    <ui:Button text="Add Floor" name="btn-add-floor" class="tool-button" />
+                    <ui:Button text="Add Roof" name="btn-add-roof" class="tool-button" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Button text="Delete" name="btn-delete" class="tool-button tool-button-alt" />
+                    <ui:Button text="Move" name="btn-move" class="tool-button tool-button-alt" />
+                    <ui:Button text="Rotate" name="btn-rotate" class="tool-button tool-button-alt" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Label text="Material" class="field-label" />
+                    <ui:DropdownField name="material-dropdown" class="tool-dropdown" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Label text="Presets" class="field-label" />
+                    <ui:DropdownField name="preset-dropdown" class="tool-dropdown" />
+                    <ui:Button text="Load Preset" name="btn-load-preset" class="tool-button" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Label text="TOOL: NONE" name="active-tool-label" class="field-label" />
+                    <ui:Label text="STORY: 0 (Ctrl+Scroll)" name="story-label" class="field-label" />
+                </ui:ScrollView>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="viewport-spacer" class="viewport-spacer" picking-mode="Ignore" />
+
+            <ui:VisualElement name="right-panel" class="side-panel">
+                <ui:ScrollView name="right-panel-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" class="side-scroll">
+                    <ui:Label text="DISASTER CONTROLS" class="panel-header" />
+                    <ui:Button text="EARTHQUAKE" name="btn-earthquake" class="disaster-button disaster-earthquake" />
+                    <ui:Label text="Magnitude" class="field-label" />
+                    <ui:Slider name="magnitude-slider" low-value="1" high-value="10" value="5" class="tool-slider" />
+                    <ui:Label text="5.0" name="magnitude-value" class="field-label" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Button text="TSUNAMI" name="btn-tsunami" class="disaster-button disaster-tsunami" />
+                    <ui:Label text="Wave Height (m)" class="field-label" />
+                    <ui:Slider name="wave-height-slider" low-value="1" high-value="20" value="5" class="tool-slider" />
+                    <ui:Label text="5.0 m" name="wave-value" class="field-label" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Button text="WINDSTORM" name="btn-windstorm" class="disaster-button disaster-windstorm" />
+                    <ui:Button text="Stop Disaster" name="btn-stop-disaster" class="tool-button tool-button-alt" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Label text="DAMAGE ANALYSIS" class="panel-header" />
+                    <ui:Label text="INTEGRITY: 100%" name="integrity-label" class="field-label" />
+                    <ui:Label text="FAILED: 0 / 0" name="failed-label" class="field-label" />
+                    <ui:Label text="MAX STRESS: 0 MPa" name="stress-label" class="field-label" />
+                    <ui:Label text="MAX DISP: 0.00 m" name="displacement-label" class="field-label" />
+                    <ui:Label text="STABILITY: STABLE" name="stability-label" class="field-label" />
+                    <ui:VisualElement class="divider" />
+                    <ui:Label text="VISUALIZATION" class="panel-header" />
+                    <ui:DropdownField name="viz-dropdown" class="tool-dropdown" />
+                </ui:ScrollView>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <ui:VisualElement name="bottom-panel" class="bottom-panel">
+            <ui:VisualElement class="env-control">
+                <ui:Label text="Temperature" class="field-label" />
+                <ui:Slider name="temperature-slider" low-value="-30" high-value="60" value="20" class="tool-slider" />
+                <ui:Label text="20°C" name="temp-value" class="field-label" />
+            </ui:VisualElement>
+            <ui:VisualElement class="env-control">
+                <ui:Label text="Humidity" class="field-label" />
+                <ui:Slider name="humidity-slider" low-value="0" high-value="100" value="50" class="tool-slider" />
+                <ui:Label text="50%" name="humidity-value" class="field-label" />
+            </ui:VisualElement>
+            <ui:VisualElement class="env-control">
+                <ui:Label text="Wind Speed" class="field-label" />
+                <ui:Slider name="wind-slider" low-value="0" high-value="100" value="0" class="tool-slider" />
+                <ui:Label text="0 m/s" name="wind-value" class="field-label" />
+            </ui:VisualElement>
+            <ui:VisualElement class="env-control">
+                <ui:Label text="Water Level" class="field-label" />
+                <ui:Slider name="water-level-slider" low-value="0" high-value="20" value="0" class="tool-slider" />
+                <ui:Label text="0.0 m" name="water-value" class="field-label" />
+            </ui:VisualElement>
+            <ui:VisualElement class="top-bar-spacer" picking-mode="Ignore" />
+            <ui:Button text="Start" name="btn-start" class="sim-control-button" />
+            <ui:Button text="Pause" name="btn-pause" class="sim-control-button" />
+            <ui:Button text="Speed" name="btn-speed" class="sim-control-button" />
+            <ui:Button text="Reset" name="btn-reset" class="sim-control-button sim-control-reset" />
+            <ui:Button text="Save" name="btn-save" class="sim-control-button" />
+            <ui:Button text="Load" name="btn-load" class="sim-control-button" />
+            <ui:Button text="Snap A" name="btn-snap-a" class="sim-control-button" />
+            <ui:Button text="Snap B" name="btn-snap-b" class="sim-control-button" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="camera-panel" class="camera-panel">
+            <ui:Label text="CAMERA" class="panel-header" />
+            <ui:Button text="Reset Camera" name="btn-camera-reset" class="camera-button" />
+            <ui:Button text="Focus Selected" name="btn-camera-focus" class="camera-button" />
+            <ui:Toggle text="Cinematic on Disaster" name="toggle-cinematic" class="camera-button" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="inspector-panel" class="inspector-panel">
+            <ui:Label text="COMPONENT INSPECTOR" class="panel-header" />
+            <ui:Label text="Click a component to inspect" name="inspector-content" class="field-label" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="experiment-panel" class="experiment-panel">
+            <ui:Label text="EXPERIMENT COMPARISON" class="panel-header" />
+            <ui:Label text="Record snapshots with Snap A / Snap B" name="experiment-content" class="field-label" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

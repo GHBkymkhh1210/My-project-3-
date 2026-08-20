@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6edd7d4f1d7fd4fac69d80d2709b5c, type: 3}
+  m_Name: Preset_WeakHouse
+  m_EditorClassIdentifier: Assembly-CSharp::DisasterSim.Building.BuildingPreset
+  PresetName: Weak House
+  Description: Single-story 2x2 wood house with only 2 corner columns and 2 walls.
+    Minimal structural redundancy - demonstrates high vulnerability to earthquakes
+    and wind.
+  Components:
+  - ComponentType: 0
+    GridCell: {x: 0, y: 0}
+    StoryIndex: 0
+    Dimensions: {x: 0.95, y: 0.5, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 0
+    GridCell: {x: 1, y: 0}
+    StoryIndex: 0
+    Dimensions: {x: 0.95, y: 0.5, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 0
+    GridCell: {x: 0, y: 1}
+    StoryIndex: 0
+    Dimensions: {x: 0.95, y: 0.5, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 0
+    GridCell: {x: 1, y: 1}
+    StoryIndex: 0
+    Dimensions: {x: 0.95, y: 0.5, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 1
+    GridCell: {x: 0, y: 0}
+    StoryIndex: 0
+    Dimensions: {x: 0.4, y: 2.8, z: 0.4}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 1
+    GridCell: {x: 1, y: 1}
+    StoryIndex: 0
+    Dimensions: {x: 0.4, y: 2.8, z: 0.4}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 3
+    GridCell: {x: 0, y: 0}
+    StoryIndex: 0
+    Dimensions: {x: 0.95, y: 2.8, z: 0.15}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 3
+    GridCell: {x: 1, y: 0}
+    StoryIndex: 0
+    Dimensions: {x: 0.95, y: 2.8, z: 0.15}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 5
+    GridCell: {x: 0, y: 0}
+    StoryIndex: 1
+    Dimensions: {x: 0.95, y: 0.3, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 5
+    GridCell: {x: 1, y: 0}
+    StoryIndex: 1
+    Dimensions: {x: 0.95, y: 0.3, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 5
+    GridCell: {x: 0, y: 1}
+    StoryIndex: 1
+    Dimensions: {x: 0.95, y: 0.3, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood
+  - ComponentType: 5
+    GridCell: {x: 1, y: 1}
+    StoryIndex: 1
+    Dimensions: {x: 0.95, y: 0.3, z: 0.95}
+    RotationY: 0
+    MaterialName: Wood

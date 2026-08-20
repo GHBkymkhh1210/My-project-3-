@@ -1,0 +1,214 @@
+.root {
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.top-bar {
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+    background-color: rgba(8, 14, 26, 0.92);
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(0, 200, 255);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.title-label {
+    color: rgb(0, 220, 255);
+    -unity-font-style: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.top-bar-spacer {
+    flex-grow: 1;
+}
+
+.stat-label {
+    color: rgb(200, 220, 235);
+    margin-left: 18px;
+    font-size: 12px;
+}
+
+.stat-damage {
+    color: rgb(255, 210, 90);
+    -unity-font-style: bold;
+}
+
+.middle-row {
+    flex-grow: 1;
+    flex-direction: row;
+    /* Without an explicit height, a row child's flex-basis defaults to its content
+       size, which can make this row (and everything below it) taller than the
+       viewport. Pin it to 0 so flex-grow is the only thing sizing it, guaranteeing
+       middle-row - and therefore the side panels - never exceeds the space actually
+       left between the top bar and the bottom panel. */
+    flex-basis: 0;
+}
+
+.side-panel {
+    width: 230px;
+    background-color: rgba(10, 16, 28, 0.88);
+    overflow: hidden;
+}
+
+.side-scroll {
+    flex-grow: 1;
+}
+
+.side-scroll > .unity-scroll-view__content-viewport {
+    padding: 12px;
+}
+
+.viewport-spacer {
+    flex-grow: 1;
+}
+
+.panel-header {
+    color: rgb(0, 200, 255);
+    -unity-font-style: bold;
+    font-size: 13px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.field-label {
+    color: rgb(160, 185, 205);
+    font-size: 11px;
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+.tool-button {
+    background-color: rgb(20, 40, 65);
+    border-width: 1px;
+    border-color: rgb(0, 130, 180);
+    color: rgb(220, 235, 245);
+    margin-bottom: 6px;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.tool-button-alt {
+    background-color: rgb(35, 30, 20);
+    border-color: rgb(180, 140, 0);
+}
+
+.tool-dropdown {
+    margin-bottom: 6px;
+}
+
+.tool-slider {
+    margin-bottom: 4px;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(0, 200, 255, 0.25);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.disaster-button {
+    -unity-font-style: bold;
+    padding: 10px;
+    border-radius: 3px;
+    border-width: 1px;
+    margin-bottom: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.disaster-earthquake {
+    background-color: rgb(150, 40, 30);
+    border-color: rgb(230, 90, 60);
+}
+
+.disaster-tsunami {
+    background-color: rgb(20, 70, 130);
+    border-color: rgb(60, 150, 230);
+}
+
+.disaster-windstorm {
+    background-color: rgb(60, 90, 40);
+    border-color: rgb(140, 190, 90);
+}
+
+.bottom-panel {
+    height: 76px;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(8, 14, 26, 0.92);
+    border-top-width: 2px;
+    border-top-color: rgb(0, 200, 255);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.env-control {
+    width: 160px;
+    margin-right: 20px;
+}
+
+.sim-control-button {
+    background-color: rgb(20, 40, 65);
+    border-width: 1px;
+    border-color: rgb(0, 130, 180);
+    color: rgb(220, 235, 245);
+    margin-left: 6px;
+    padding: 8px 14px;
+    border-radius: 3px;
+}
+
+.sim-control-reset {
+    background-color: rgb(65, 25, 25);
+    border-color: rgb(200, 70, 60);
+}
+
+.camera-panel {
+    position: absolute;
+    top: 60px;
+    left: 246px;
+    width: 190px;
+    background-color: rgba(10, 16, 28, 0.88);
+    padding: 10px;
+    border-width: 1px;
+    border-color: rgba(0, 200, 255, 0.4);
+    border-radius: 4px;
+}
+
+.camera-button {
+    background-color: rgb(20, 40, 65);
+    border-width: 1px;
+    border-color: rgb(0, 130, 180);
+    color: rgb(220, 235, 245);
+    margin-bottom: 6px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.inspector-panel {
+    position: absolute;
+    bottom: 86px;
+    left: 250px;
+    width: 280px;
+    background-color: rgba(10, 16, 28, 0.92);
+    padding: 12px;
+    border-width: 1px;
+    border-color: rgba(0, 200, 255, 0.4);
+    border-radius: 4px;
+}
+
+.experiment-panel {
+    position: absolute;
+    bottom: 86px;
+    right: 250px;
+    width: 320px;
+    background-color: rgba(10, 16, 28, 0.92);
+    padding: 12px;
+    border-width: 1px;
+    border-color: rgba(0, 200, 255, 0.4);
+    border-radius: 4px;
+}
